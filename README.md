@@ -62,3 +62,70 @@ This project was completed as part of my learning journey with **FreeCodeCamp**.
 ## License
 
 This project is open-source and available under the MIT License.
+
+
+
+# Kare Kök Bisection Yöntemi ile Hesaplama (Python)
+
+Bu proje, **Bisection Yöntemi** kullanarak bir sayının karekökünü **Python** dilinde hesaplar. Bu yöntem, bir sayının yaklaşık karekökünü bulmak için yinelemeli bir yaklaşım kullanır.
+
+## Problem Tanımı
+
+Program, **Bisection Yöntemi** ile negatif olmayan bir sayının karekökünü hesaplar. Bu yöntem, yaklaşık karekökü, belirtilen toleransa kadar bulana kadar aralığı (düşük ve yüksek değerler) yinelemeli olarak daraltır.
+
+## Özellikler
+- Negatif olmayan sayıların karekökünü hesaplar.
+- Karekök bulmak için bisection yaklaşımını kullanır.
+- `0` ve `1` için kenar durumları doğrudan ele alır.
+- Hassasiyet için tolerans belirleme seçeneği sunar.
+- Sonsuz döngülerden kaçınmak için maksimum iterasyon sayısını sınırlar.
+
+## Fonksiyon: `square_root_bisection(karekök_hedefi, tolerans=1e-7, max_iterasyon=100)`
+
+### Parametreler:
+- `karekök_hedefi`: Karekökü hesaplanacak sayı.
+- `tolerans`: Sonuç için kabul edilebilir hata aralığı. Varsayılan olarak `1e-7`'dir.
+- `max_iterasyon`: Denenecek maksimum iterasyon sayısı. Varsayılan olarak `100`'dür.
+
+### Döndürülen:
+- Fonksiyon, giriş sayısının yaklaşık karekökünü döndürür.
+
+### Örnek Kullanım:
+```python
+N = 16
+square_root_bisection(N)
+```
+
+Bu, şu çıktıyı verir:
+```
+16'nın karekökü yaklaşık olarak 4.0'dır.
+```
+
+### Hata Yönetimi:
+- Eğer `karekök_hedefi` negatif bir sayıysa, `ValueError` hatası fırlatılır çünkü negatif sayıların karekökü, reel sayı sisteminde tanımlı değildir.
+- Program, sonucun toleransa göre yakınsaması veya maksimum iterasyon sayısının aşılması durumunda durur.
+
+## Kurulum
+
+Bu betiği kullanmak için sadece projeyi klonlayın ve Python dosyasını çalıştırın.
+
+1. Depoyu klonlayın:
+    ```bash
+    git clone https://github.com/FihriSina/Square-Root-Bisection.git
+    ```
+2. Proje dizinine gidin:
+    ```bash
+    cd Square-Root-Bisection
+    ```
+3. Betiği çalıştırın:
+    ```bash
+    python square_root_bisection.py
+    ```
+
+## Katkıda Bulunma
+
+Bu proje, **FreeCodeCamp** ile öğrenim sürecimin bir parçası olarak tamamlanmıştır. Katkılar, öneriler ve iyileştirmeler her zaman hoş karşılanır!
+
+## Lisans
+
+Bu proje açık kaynaklıdır ve MIT Lisansı altında mevcuttur.
